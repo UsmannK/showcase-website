@@ -1,0 +1,201 @@
+/* --------------------------------------------------------------
+
+   reset.css
+   * Resets default browser CSS.
+
+-------------------------------------------------------------- */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, i, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section,
+input, select, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+ul li {
+  list-style-type: none; }
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.5; }
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+table, td, th {
+  vertical-align: middle; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img {
+  border: none; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #333333; }
+
+.box {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10vw;
+  text-align: left; }
+  @media screen and (max-width: 768px) {
+    .box {
+      text-align: center;
+      height: 80vh;
+      padding: 10vh 5vw; } }
+  .box#title {
+    background-color: #27AE60; }
+  .box#about {
+    background-color: #ECF0F1; }
+
+.title-text {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  .title-text h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -2;
+    margin: 0;
+    margin-bottom: 16px;
+    color: #ECF0F1; }
+    @media screen and (max-width: 768px) {
+      .title-text h1 {
+        font-size: 36px; } }
+  .title-text p {
+    font-size: 24px;
+    color: #BDC3C7; }
+    @media screen and (max-width: 768px) {
+      .title-text p {
+        font-size: 18px; } }
+
+.lines {
+  position: absolute;
+  height: 70vh;
+  width: 120px;
+  bottom: 0;
+  right: 10vw;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
+  @media screen and (max-width: 960px) {
+    .lines {
+      opacity: 0.2; } }
+  .lines .line {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: #ECF0F1;
+    border-radius: 5px; }
+    .lines .line#line1 {
+      left: 10px;
+      top: 40vh;
+      height: 30vh; }
+    .lines .line#line2 {
+      left: 40px;
+      top: 0;
+      height: 70vh; }
+    .lines .line#line3 {
+      left: 70px;
+      top: 10vh;
+      height: 60vh; }
+    .lines .line#line4 {
+      left: 100px;
+      top: 25vh;
+      height: 45vh; }
+  .lines .dot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #ECF0F1; }
+    .lines .dot#dot1 {
+      left: 0;
+      top: 40vh; }
+    .lines .dot#dot2 {
+      left: 30px;
+      top: 0; }
+    .lines .dot#dot3 {
+      left: 60px;
+      top: 10vh; }
+    .lines .dot#dot4 {
+      left: 90px;
+      top: 25vh; }
+
+.about-text {
+  position: relative;
+  top: 50vh;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50vw; }
+  @media screen and (max-width: 768px) {
+    .about-text {
+      text-align: left;
+      padding: 5vh 5vw;
+      width: auto;
+      top: 0;
+      -webkit-transform: none;
+              transform: none; } }
+  .about-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #95A5A6; }
+  .about-text p {
+    font-size: 18px; }
+
+.btn-row {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .btn-row button {
+    padding: 6px 12px;
+    border: 2px solid #ECF0F1;
+    border-radius: 3px;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #ECF0F1;
+    margin: 0;
+    margin-right: 8px;
+    -webkit-transition: all 0.25s ease;
+            transition: all 0.25s ease; }
+    .btn-row button:hover {
+      background-color: #ECF0F1;
+      color: #27AE60;
+      cursor: pointer; }

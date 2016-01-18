@@ -1,0 +1,169 @@
+@import "reset";
+
+html, body {
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #333333;
+}
+
+
+
+.box {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10vw;
+  text-align: left;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    height: 80vh;
+    padding: 10vh 5vw;
+  }
+
+  &#title {
+    background-color: #27AE60;
+  }
+
+  &#about {
+    background-color: #ECF0F1;
+  }
+}
+
+.title-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -2;
+    margin: 0;
+    margin-bottom: 16px;
+    color: #ECF0F1;
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+  
+  p {
+    font-size: 24px;
+    color: #BDC3C7;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.lines {
+  position: absolute;
+  height: 70vh;
+  width: 120px;
+  bottom: 0;
+  right: 10vw;
+  transition: all 0.5s ease;
+  @media screen and (max-width: 960px) {
+    opacity: 0.2;
+  }
+
+  .line {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: #ECF0F1;
+    border-radius: 5px;
+
+    &#line1 {
+      left: 10px;
+      top: 40vh;
+      height: 30vh;
+    }
+    &#line2 {
+      left: 40px;
+      top: 0;
+      height: 70vh;
+    }
+    &#line3 {
+      left: 70px;
+      top: 10vh;
+      height: 60vh;
+    }
+    &#line4 {
+      left: 100px;
+      top: 25vh;
+      height: 45vh;
+    }
+  }
+
+  .dot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #ECF0F1;
+
+    &#dot1 {
+      left: 0;
+      top: 40vh;
+    }
+    &#dot2 {
+      left: 30px;
+      top: 0;
+    }
+    &#dot3 {
+      left: 60px;
+      top: 10vh;
+    }
+    &#dot4 {
+      left: 90px;
+      top: 25vh;
+    }
+  }
+}
+
+.about-text {
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 50vw;
+  @media screen and (max-width: 768px) {
+    text-align: left;
+    padding: 5vh 5vw;
+    width: auto;
+    top: 0;
+    transform: none;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #95A5A6;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.btn-row {
+  flex: 1;
+  flex-direction: row;
+
+  button {
+    padding: 6px 12px;
+    border: 2px solid #ECF0F1;
+    border-radius: 3px;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #ECF0F1;
+    margin: 0;
+    margin-right: 8px;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: #ECF0F1;
+      color: #27AE60;
+      cursor: pointer;
+    }
+  }
+}
